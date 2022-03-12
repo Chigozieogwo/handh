@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Footer from './components/Footer.js'
+// import Footer from './components/Footer.js'
 
 import DashboardScreen from './screens/DashboardScreen.js'
 import CompanyListScreen from './screens/CompanyListScreen.js'

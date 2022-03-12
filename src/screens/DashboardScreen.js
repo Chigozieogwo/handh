@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom'
 import ChartBar from '../components/ChartBar.js'
 
 const DashboardScreen = () => {
-  const [show, setShow] = useState(false)
-
-  const showDashboard = () => {
-    setShow(true)
-  }
-
   return (
     <div>
       <div class="drawer h-5/6   drawer-mobile w-full">
