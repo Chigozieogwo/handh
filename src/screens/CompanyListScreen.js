@@ -238,11 +238,12 @@ const CompanyListScreen = () => {
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                  <Link to="/profile">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
                                     </span>
-                                  </button>
+                                  </button></Link>
                                 </td>
                               </tr>
 
@@ -262,11 +263,12 @@ const CompanyListScreen = () => {
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <Link to="/profile">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
                                     </span>
-                                  </button>
+                                  </button></Link>
                                 </td>
                               </tr>
 
@@ -286,11 +288,12 @@ const CompanyListScreen = () => {
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <Link to="/profile">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
                                     </span>
-                                  </button>
+                                  </button></Link>
                                 </td>
                               </tr>
 
@@ -310,11 +313,12 @@ const CompanyListScreen = () => {
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
+                                <Link to="/profile">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
                                     </span>
-                                  </button>
+                                  </button></Link>
                                 </td>
                               </tr>
                             </tbody>
@@ -403,6 +407,8 @@ const CompanyListScreen = () => {
                 </div>
               </div>
             </div>
+           
+           
             {/* mmmm */}
           </div>
         </div>
@@ -420,7 +426,7 @@ const CompanyListScreen = () => {
                   fill="currentColor">
                   <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
                 </svg> */}
-                <span class="ml-2 text-sm font-bold">H & H Inspection</span>
+                <span class="ml-2 text-sm font-bold">H & H Pre-Inspection</span>
               </a>
               <div class="w-full px-2">
                 <div class="flex flex-col items-center w-full mt-3 ">
@@ -462,7 +468,7 @@ const CompanyListScreen = () => {
                   </Link>
                   <Link
                     class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
-                    to="/user">
+                    to="/profile">
                     <svg
                       class="w-6 h-6 stroke-current"
                       xmlns="http://www.w3.org/2000/svg"
