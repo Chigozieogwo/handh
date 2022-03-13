@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import DashboardScreen from './screens/DashboardScreen.js'
 import CompanyListScreen from './screens/CompanyListScreen.js'
+import CompanyProfileScreen from './screens/CompanyProfileScreen.js'
 import LoginScreen from './screens/LoginScreen.js'
 import HomeScreen from './screens/HomeScreen.js'
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="home" element={<HomeScreen />} />
           <Route path="dashboard" element={<DashboardScreen />} />
           <Route path="list" element={<CompanyListScreen />} />
+          <Route path="profile" element={<CompanyProfileScreen />} />
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
