@@ -9,7 +9,11 @@ const ReportScreen = () => {
 
     const [startDate, setStartDate] = useState(new Date());
     const [startDate2, setStartDate2] = useState(new Date());
+    const [display, setIsdiplay] = useState(false);
 
+    const isDiplayed =()=>{
+        setIsdiplay(true)
+    }
   return (
     <div>
       <div class="drawer h-5/6   drawer-mobile w-full">
@@ -101,25 +105,26 @@ const ReportScreen = () => {
           <div className="bg-gray-100  p-5">
             <div>
               <h1 className="text-2xl mb-4 p-4 bg-gradient-to-r from-green-400 to-green-700">
-                Dashboard
+                Search Reports
               </h1>
             </div>{' '}
             {/* section amount transfers */}
             {/* mmmm */}
             <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-            <div class=" grid grid-cols-1 pb-3 md:grid-cols-3 lg:grid-cols-3 px-5 xl:p-0 gap-4 xl:gap-6">
+            <div class="mt-10 mb-10 grid grid-cols-1 pb-3 md:grid-cols-3 lg:grid-cols-3 px-5 xl:p-0 gap-4 xl:gap-6">
              
-             <div class=" p-6 rounded border border-gray-50">
+             
+             <div class=" mt-8">
                
              <select class="select select-success w-full max-w-xs">
-  <option disabled selected>Pick your favorite anime</option>
-  <option>One Piece</option>
-  <option>Naruto</option>
-  <option>Death Note</option>
-  <option>Attack on Titan</option>
-  <option>Bleach</option>
-  <option>Fullmetal Alchemist</option>
-  <option>Jojo's Bizarre Adventure</option>
+  <option disabled selected>Search Report</option>
+  <option>Audit Report/Operation Activities</option>
+  <option>Financial Audit of Exports</option>
+  <option>Oil Product Pricing Options/Price Quotes</option>
+  <option>Notification Alerts</option>
+  <option>Invoice Reports/Payment History Reports</option>
+  <option>Other Reports</option>
+  
 </select>
 
 
@@ -131,10 +136,23 @@ const ReportScreen = () => {
                         
             
 <div>
-<DatePicker className="select-success w-full max-w-xs p-4 mt-4" selected={startDate} onChange={(date) => setStartDate(date)} />
+<span class="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">Start</span>
+
+<DatePicker className="select-success w-full max-w-xs p-4 mt-1" selected={startDate} onChange={(date) => setStartDate(date)} />
 </div>
 <div>
-<DatePicker className="select-success w-full max-w-xs p-4 mt-4" selected={startDate2} onChange={(date) => setStartDate2(date)} />
+<span class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">End</span>
+<DatePicker className="select-success w-full max-w-xs p-4 mt-1" selected={startDate2} onChange={(date) => setStartDate2(date)} />
+<div class="flex justify-between items-center">
+                  <h2 class="text-sm text-gray-600 font-bold tracking-wide">
+                   
+                  </h2>
+                 <div className="mt-4 ">
+                 <button onClick={isDiplayed} type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-8 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Search</button>
+                
+                 </div>
+                </div>
+
 </div>
 
              
@@ -142,17 +160,18 @@ const ReportScreen = () => {
              
              
            </div>
-                 
+
             </div>
+             <div className="mt-10"> </div>    
            
            
 
           
-            <div class=" bg-white mt-4 p-6 rounded-xl border border-gray-50 ">
+            {display ? (<div class=" bg-white mt-4 p-6 rounded-xl border border-gray-50 ">
               <div className="py-2 ">
                 <div class="flex justify-between items-center">
                   <h2 class="text-sm text-gray-600 font-bold tracking-wide">
-                    List Of Companies Inspected
+                    List Of Reports
                   </h2>
                   <a
                     href="#"
@@ -173,12 +192,12 @@ const ReportScreen = () => {
                                 <th
                                   scope="col"
                                   class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                  Company Name
+                                  Report Name
                                 </th>
                                 <th
                                   scope="col"
                                   class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-                                  Reg No
+                                  Report No. 
                                 </th>
                                 <th
                                   scope="col"
@@ -203,7 +222,7 @@ const ReportScreen = () => {
                             <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
                               <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                  J Global Limited
+                                 Audit Report
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
                                   01124
@@ -213,11 +232,11 @@ const ReportScreen = () => {
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                   <span class="bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
-                                    Inactive
+                                    Pending
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                  <Link to="/profile">
+                                  <Link to="">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
@@ -228,7 +247,7 @@ const ReportScreen = () => {
 
                               <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                  H&H Energy Limited
+                                  Financial Report
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
                                   01934
@@ -238,11 +257,11 @@ const ReportScreen = () => {
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                   <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                                    Active
+                                  Issued
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <Link to="/profile">
+                                <Link to="">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
@@ -253,7 +272,7 @@ const ReportScreen = () => {
 
                               <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                  Rambo Labs Limited
+                                  Price Quote
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
                                   02924
@@ -267,7 +286,7 @@ const ReportScreen = () => {
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <Link to="/profile">
+                                <Link to="">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
@@ -278,21 +297,21 @@ const ReportScreen = () => {
 
                               <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                  JAI Global Limited
+                                  Audit Report
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
-                                  09167
+                                  AU/WD/67
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                   03/03/2022
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                   <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">
-                                    Active
+                                    Issued
                                   </span>
                                 </td>
                                 <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                <Link to="/profile">
+                                <Link to="">
                                   <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800">
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                       view
@@ -306,6 +325,8 @@ const ReportScreen = () => {
                       </div>
                     </div>
                   </div>
+                
+                
                 </div>
                 <div class="flex justify-between items-center">
                   <h2 class="text-sm text-gray-600 font-bold tracking-wide"></h2>
@@ -387,7 +408,7 @@ const ReportScreen = () => {
               </div>
             </div>
            
-           
+           ): null}
             {/* mmmm */}
           </div>
         </div>
