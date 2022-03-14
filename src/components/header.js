@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const header = () => {
   return (
@@ -52,11 +53,16 @@ const header = () => {
               </button>
             </li>
             <li>
-              <button
-                type="button"
-                class="text-white  bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                Register
-              </button>
+              <Link className="py-0.5" to="/">
+              <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:ring-lime-200 dark:focus:ring-lime-800">
+  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      Login
+  </span>
+</button>
+
+              </Link>
+           
+              
             </li>
             <div class="dropdown dropdown-end px-4 mr-4">
               <label tabindex="0" class="btn btn-ghost btn-circle avatar">

@@ -16,7 +16,7 @@ const Footer = () => {
                 </div>
               </div>
               <span class="self-center text-2xl font-semibold ml-5 whitespace-nowrap dark:text-white">
-                H & H Inspection
+                H & H Pre-Inspection
               </span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm text-white sm:mb-0 dark:text-gray-400">
@@ -46,7 +46,7 @@ const Footer = () => {
           <span class="block text-sm text-white sm:text-center dark:text-gray-400">
             © 2022{' '}
             <a href="" class="hover:underline">
-              H & H Inspection
+              H & H Pre-Inspection
             </a>
             . All Rights Reserved.
           </span>

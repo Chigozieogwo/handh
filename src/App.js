@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // import Footer from './components/Footer.js'
 
 import DashboardScreen from './screens/DashboardScreen.js'
+import ReportScreen from './screens/ReportScreen.js'
 import CompanyListScreen from './screens/CompanyListScreen.js'
 import CompanyProfileScreen from './screens/CompanyProfileScreen.js'
 import LoginScreen from './screens/LoginScreen.js'
@@ -18,6 +19,7 @@ function App() {
           <Route path="dashboard" element={<DashboardScreen />} />
           <Route path="list" element={<CompanyListScreen />} />
           <Route path="profile" element={<CompanyProfileScreen />} />
+          <Route path="reports" element={<ReportScreen />} />
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
